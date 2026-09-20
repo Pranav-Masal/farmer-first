@@ -46,7 +46,10 @@ ALLOWED_HOSTS = [
     "localhost",
 ]
 
+render_hostname = os.getenv("RENDER_EXTERNAL_HOSTNAME")
 
+if render_hostname:
+    ALLOWED_HOSTS.append(render_hostname)
 # Application definition
 
 INSTALLED_APPS = [
