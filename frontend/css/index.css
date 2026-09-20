@@ -1,0 +1,889 @@
+
+/* =========================================================
+   FARMER FIRST — HOMEPAGE
+   Professional Responsive Landing Page
+========================================================= */
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    padding: 90px 0 100px;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(34, 197, 94, 0.10),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #f7faf7 0%,
+            #eef7ef 100%
+        );
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 70px;
+    min-height: 600px;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    margin: 20px 0;
+    font-size: clamp(42px, 5vw, 72px);
+    line-height: 1.04;
+    letter-spacing: -2.5px;
+    font-weight: 800;
+    color: #17251b;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: #198754;
+}
+
+.hero-description {
+    max-width: 620px;
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #5d6b61;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn-large {
+    min-height: 54px;
+    padding: 14px 25px;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   HERO TRUST
+========================================================= */
+
+.hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 38px;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #526056;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.trust-item strong {
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.hero-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 520px;
+}
+
+.hero-main-card {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 410px);
+    min-height: 410px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 34px;
+    background:
+        linear-gradient(
+            145deg,
+            #166534,
+            #198754 55%,
+            #22a35a
+        );
+    color: white;
+    box-shadow:
+        0 35px 70px rgba(25, 135, 84, 0.24);
+    overflow: hidden;
+}
+
+.hero-main-card::before {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    right: -80px;
+    top: -80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.hero-main-card::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    left: -90px;
+    bottom: -90px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-card-icon {
+    position: relative;
+    z-index: 1;
+    width: 75px;
+    height: 75px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 30px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.14);
+    font-size: 38px;
+}
+
+.hero-card-label {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 12px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.hero-main-card h2 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 18px;
+    font-size: 37px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.hero-main-card p {
+    position: relative;
+    z-index: 1;
+    max-width: 280px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FLOATING CARDS
+========================================================= */
+
+.floating-card {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 17px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 18px 40px rgba(20, 50, 30, 0.13);
+    backdrop-filter: blur(12px);
+}
+
+.floating-card > span {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: #edf8ef;
+    font-size: 21px;
+}
+
+.floating-card strong,
+.floating-card small {
+    display: block;
+}
+
+.floating-card strong {
+    margin-bottom: 3px;
+    color: #203025;
+    font-size: 13px;
+}
+
+.floating-card small {
+    color: #77837a;
+    font-size: 11px;
+}
+
+.floating-card-top {
+    top: 70px;
+    right: -10px;
+}
+
+.floating-card-bottom {
+    bottom: 65px;
+    left: -25px;
+}
+
+.floating-card-bottom > span {
+    color: #198754;
+    background: #eaf7ee;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats-section {
+    position: relative;
+    z-index: 5;
+    margin-top: -35px;
+    padding-bottom: 80px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.stat-card {
+    padding: 27px 23px;
+    border: 1px solid #e5ebe6;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 14px 35px rgba(30, 60, 40, 0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(30, 60, 40, 0.11);
+}
+
+.stat-icon {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 27px;
+}
+
+.stat-card strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #203025;
+    font-size: 18px;
+}
+
+.stat-card p {
+    margin: 0;
+    color: #758078;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   COMMON SECTION HEADINGS
+========================================================= */
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin: 14px 0;
+    color: #1c2a20;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.section-heading h2 span {
+    display: block;
+    color: #198754;
+}
+
+.section-heading p {
+    max-width: 580px;
+    margin: 0 auto;
+    color: #69766d;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    padding: 32px;
+    border: 1px solid #e8ede9;
+    border-radius: 22px;
+    background: #ffffff;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    border-color: #cce5d2;
+    box-shadow: 0 20px 45px rgba(25, 70, 40, 0.09);
+}
+
+.feature-icon {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 23px;
+    border-radius: 17px;
+    background: #edf8ef;
+    font-size: 27px;
+}
+
+.feature-card h3 {
+    margin-bottom: 11px;
+    color: #203025;
+    font-size: 18px;
+}
+
+.feature-card p {
+    margin: 0;
+    color: #6e7b72;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
+
+.how-section {
+    padding: 105px 0;
+    background: #f7faf7;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.step-card {
+    position: relative;
+    padding: 35px 27px;
+    border: 1px solid #e3ebe4;
+    border-radius: 22px;
+    background: #ffffff;
+    text-align: center;
+    transition: transform 0.25s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-6px);
+}
+
+.step-number {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    color: #c7d7ca;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.step-icon {
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 22px;
+    border-radius: 20px;
+    background: #edf8ef;
+    font-size: 30px;
+}
+
+.step-card h3 {
+    margin-bottom: 9px;
+    color: #203025;
+    font-size: 17px;
+}
+
+.step-card p {
+    margin: 0;
+    color: #718078;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FARMER CTA
+========================================================= */
+
+.farmer-cta {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.cta-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    min-height: 370px;
+    padding: 60px 70px;
+    border-radius: 30px;
+    background:
+        linear-gradient(
+            135deg,
+            #123d24,
+            #166534 55%,
+            #198754
+        );
+    overflow: hidden;
+    box-shadow: 0 25px 55px rgba(20, 70, 35, 0.16);
+}
+
+.cta-card::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    right: -170px;
+    top: -180px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.cta-content .section-label {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.cta-content h2 {
+    margin: 15px 0;
+    color: #ffffff;
+    font-size: clamp(31px, 4vw, 47px);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.cta-content h2 span {
+    display: block;
+    color: #b9f2c9;
+}
+
+.cta-content p {
+    max-width: 590px;
+    margin-bottom: 27px;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.8;
+}
+
+.cta-card .btn-primary {
+    background: #ffffff;
+    color: #166534;
+}
+
+.cta-card .btn-primary:hover {
+    background: #edf8ef;
+}
+
+.cta-visual {
+    position: relative;
+    z-index: 2;
+    width: 210px;
+    height: 210px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.10);
+    font-size: 105px;
+}
+
+
+/* =========================================================
+   BUYER CTA
+========================================================= */
+
+.buyer-cta {
+    padding: 100px 0;
+    background: #f7faf7;
+}
+
+.buyer-cta-content {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+}
+
+.buyer-cta-content h2 {
+    margin: 15px 0;
+    color: #1c2a20;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.buyer-cta-content h2 span {
+    display: block;
+    color: #198754;
+}
+
+.buyer-cta-content p {
+    max-width: 570px;
+    margin: 0 auto 28px;
+    color: #6c786f;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    padding-top: 70px;
+    background: #102017;
+    color: #ffffff;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr repeat(3, 1fr);
+    gap: 45px;
+    padding-bottom: 55px;
+}
+
+.footer-brand .logo {
+    display: inline-block;
+    margin-bottom: 17px;
+    color: #ffffff;
+}
+
+.footer-brand p {
+    max-width: 320px;
+    margin: 0;
+    color: #a7b4aa;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.footer-links h3 {
+    margin-bottom: 9px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.footer-links a {
+    width: fit-content;
+    color: #a7b4aa;
+    font-size: 13px;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #819087;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 850px;
+        margin: auto;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions,
+    .hero-trust {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        min-height: 470px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .hero-section {
+        padding: 65px 0 80px;
+    }
+
+    .hero-grid {
+        min-height: auto;
+    }
+
+    .hero-content h1 {
+        font-size: 43px;
+        letter-spacing: -1.8px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero-trust {
+        flex-direction: column;
+        align-items: center;
+        gap: 13px;
+    }
+
+    .hero-visual {
+        min-height: 400px;
+    }
+
+    .hero-main-card {
+        width: 100%;
+        min-height: 350px;
+        padding: 35px;
+    }
+
+    .hero-main-card h2 {
+        font-size: 31px;
+    }
+
+    .floating-card-top {
+        top: 10px;
+        right: -5px;
+    }
+
+    .floating-card-bottom {
+        bottom: 15px;
+        left: -5px;
+    }
+
+    .stats-section {
+        margin-top: -20px;
+        padding-bottom: 60px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-section,
+    .how-section,
+    .farmer-cta,
+    .buyer-cta {
+        padding: 75px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 38px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 42px 30px;
+    }
+
+    .cta-visual {
+        position: absolute;
+        right: -40px;
+        bottom: -40px;
+        width: 170px;
+        height: 170px;
+        font-size: 80px;
+        opacity: 0.6;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-main-card {
+        min-height: 320px;
+        padding: 28px;
+        border-radius: 25px;
+    }
+
+    .hero-card-icon {
+        width: 62px;
+        height: 62px;
+        font-size: 30px;
+    }
+
+    .hero-main-card h2 {
+        font-size: 27px;
+    }
+
+    .floating-card {
+        padding: 11px 13px;
+    }
+
+    .floating-card > span {
+        width: 35px;
+        height: 35px;
+        font-size: 17px;
+    }
+
+    .floating-card strong {
+        font-size: 11px;
+    }
+
+    .floating-card small {
+        font-size: 9px;
+    }
+
+    .feature-card,
+    .step-card {
+        padding: 27px 22px;
+    }
+
+    .cta-card {
+        padding: 35px 24px;
+    }
+}
+

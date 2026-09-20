@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Orders | Farmer First</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/orders.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+         NAVBAR
+    =============================== -->
+
+    <nav class="navbar">
+
+    <div class="container nav-content">
+
+        <a href="index.html" class="logo">
+            🌱 Farmer First
+        </a>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Marketplace
+            </a>
+
+            <a href="cart.html">
+                Cart 🛒
+            </a>
+
+            <a
+                href="orders.html"
+                class="active"
+            >
+                Orders
+            </a>
+
+            <a href="notifications.html">
+                Notifications 🔔
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+    <!-- ==============================
+         MAIN
+    =============================== -->
+
+    <main class="orders-page">
+
+        <div class="container">
+
+
+            <!-- HEADER -->
+
+            <section class="orders-header">
+
+                <div>
+
+                    <span class="section-label">
+                        Order Management
+                    </span>
+
+                    <h1>
+                        My Orders
+                    </h1>
+
+                    <p>
+                        Track your purchases and view order details.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="products.html"
+                    class="btn btn-primary"
+                >
+                    🛒 Continue Shopping
+                </a>
+
+            </section>
+
+
+
+            <!-- MESSAGE -->
+
+            <div
+                id="ordersMessage"
+                class="orders-message"
+                style="display: none;"
+            >
+            </div>
+
+
+
+            <!-- LOADING -->
+
+            <div
+                id="ordersLoading"
+                class="loading-state"
+            >
+
+                <div class="loading-spinner"></div>
+
+                <p>
+                    Loading your orders...
+                </p>
+
+            </div>
+
+
+
+            <!-- ORDERS -->
+
+            <section
+                id="ordersContainer"
+                class="orders-container"
+                style="display: none;"
+            >
+            </section>
+
+
+
+            <!-- EMPTY -->
+
+            <section
+                id="ordersEmpty"
+                class="empty-state"
+                style="display: none;"
+            >
+
+                <div class="empty-icon">
+                    📦
+                </div>
+
+
+                <h2>
+                    No Orders Yet
+                </h2>
+
+
+                <p>
+                    You haven't placed any orders yet.
+                </p>
+
+
+                <a
+                    href="products.html"
+                    class="btn btn-primary"
+                >
+                    Explore Marketplace
+                </a>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 Farmer First. Grow More. Earn More. Connect Better.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    =============================== -->
+
+    <script src="js/api.js"></script>
+
+    <script src="js/orders.js"></script>
+
+
+</body>
+
+</html>

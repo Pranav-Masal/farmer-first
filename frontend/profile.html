@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | Farmer First</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body class="profile-page">
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+  <nav class="navbar">
+
+    <div class="container nav-content">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            🌱 Farmer First
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Marketplace
+            </a>
+
+            <a href="cart.html">
+                Cart 🛒
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+            <a
+                href="notifications.html"
+                class="active"
+            >
+                Notifications
+                <span
+                    id="notificationBadge"
+                    class="notification-badge"
+                >
+                    0
+                </span>
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+    <!-- =========================================
+         PROFILE
+    ========================================== -->
+
+    <main class="profile-main">
+
+        <div class="container profile-container">
+
+            <div class="profile-header">
+
+                <div>
+                    <span class="profile-label">
+                        ACCOUNT
+                    </span>
+
+                    <h1>My Profile</h1>
+
+                    <p>
+                        Manage your Farmer First account information.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 MESSAGE
+            ========================================== -->
+
+            <div id="profileMessage" class="profile-message"></div>
+
+
+            <!-- =========================================
+                 PROFILE CARD
+            ========================================== -->
+
+            <section class="profile-card">
+
+                <div class="profile-top">
+
+                    <div class="profile-avatar" id="profileAvatar">
+                        U
+                    </div>
+
+                    <div class="profile-user-info">
+
+                        <h2 id="profileName">
+                            Loading...
+                        </h2>
+
+                        <p id="profileUsername">
+                            @username
+                        </p>
+
+                        <span id="profileRole" class="profile-role">
+                            User
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================================
+                     PROFILE INFORMATION
+                ========================================== -->
+
+                <div class="profile-section">
+
+                    <div class="profile-section-title">
+                        <h3>Personal Information</h3>
+                    </div>
+
+                    <div class="profile-grid">
+
+                        <div class="profile-field">
+
+                            <label>Username</label>
+
+                            <div class="profile-value" id="username">
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-field">
+
+                            <label>Email</label>
+
+                            <div class="profile-value" id="email">
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-field">
+
+                            <label>First Name</label>
+
+                            <div class="profile-value" id="firstName">
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-field">
+
+                            <label>Last Name</label>
+
+                            <div class="profile-value" id="lastName">
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-field">
+
+                            <label>Phone</label>
+
+                            <div class="profile-value" id="phone">
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-field">
+
+                            <label>Role</label>
+
+                            <div class="profile-value" id="role">
+                                —
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================================
+                     ADDRESS
+                ========================================== -->
+
+                <div class="profile-section">
+
+                    <div class="profile-section-title">
+                        <h3>Address Information</h3>
+                    </div>
+
+                    <div class="profile-grid">
+
+                        <div class="profile-field profile-field-full">
+
+                            <label>Address</label>
+
+                            <div class="profile-value" id="address">
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-field">
+
+                            <label>City</label>
+
+                            <div class="profile-value" id="city">
+                                —
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================================
+                     ACCOUNT ACTIONS
+                ========================================== -->
+
+                <div class="profile-actions">
+
+                    <button
+        type="button"
+        id="editProfileBtn"
+        class="profile-btn primary">
+        Edit Profile
+    </button>
+
+                    <a href="index.html" class="profile-btn secondary">
+                        Back Home
+                    </a>
+
+                    <button id="profileLogoutBtn" class="profile-btn danger">
+                        Logout
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+                    🌱 Farmer First
+                </div>
+
+                <p>
+                    Grow More. Earn More. Connect Better.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="products.html">Marketplace</a>
+
+                <a href="cart.html">Cart</a>
+
+                <a href="orders.html">Orders</a>
+
+                <a href="notifications.html">
+                    Notifications
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    © 2026 Farmer First. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="js/api.js"></script>
+    <script src="js/profile.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="View your Farmer First notifications and order updates."
+>
+
+<title>Notifications | Farmer First</title>
+
+<link
+    rel="stylesheet"
+    href="css/style.css"
+>
+
+<link
+    rel="stylesheet"
+    href="css/notifications.css"
+>
+
+</head>
+
+<body>
+
+<!-- =========================================
+     NAVBAR
+========================================== -->
+
+<nav class="navbar">
+
+    <div class="container nav-content">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            🌱 Farmer First
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Marketplace
+            </a>
+
+            <a href="cart.html">
+                Cart 🛒
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+            <a
+                href="notifications.html"
+                class="active"
+            >
+                Notifications
+                <span
+                    id="notificationBadge"
+                    class="notification-badge"
+                >
+                    0
+                </span>
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================
+     MAIN CONTENT
+========================================== -->
+
+<main class="container page-section">
+
+
+    <!-- PAGE HEADER -->
+
+    <section class="notifications-page-header">
+
+        <div class="notifications-header-content">
+
+            <span class="section-label">
+                NOTIFICATION CENTER
+            </span>
+
+            <h1>
+                Notifications
+            </h1>
+
+            <p>
+                Stay updated with your orders,
+                deliveries, and important account activity.
+            </p>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="markAllReadBtn"
+            class="btn btn-secondary"
+        >
+            ✓ Mark All as Read
+        </button>
+
+    </section>
+
+
+    <!-- MESSAGE -->
+
+    <div
+        id="notificationMessage"
+        class="form-message"
+    ></div>
+
+
+    <!-- =========================================
+         NOTIFICATIONS CARD
+    ========================================== -->
+
+    <section class="notifications-section">
+
+
+        <div class="notifications-section-header">
+
+            <div>
+
+                <h2>
+                    Recent Notifications
+                </h2>
+
+                <p>
+                    Your latest updates are shown here.
+                </p>
+
+            </div>
+
+
+            <div class="notifications-header-icon">
+                🔔
+            </div>
+
+        </div>
+
+
+        <div
+            id="notificationsContainer"
+            class="notifications-container"
+        >
+
+            <div class="notifications-loading">
+
+                <div class="loading-spinner"></div>
+
+                <p>
+                    Loading notifications...
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+========================================== -->
+
+<footer class="site-footer">
+
+    <div class="container footer-content">
+
+
+        <div class="footer-brand">
+
+            <div class="logo">
+                🌱 Farmer First
+            </div>
+
+            <p>
+                Grow More. Earn More. Connect Better.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Marketplace
+            </a>
+
+            <a href="cart.html">
+                Cart
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+            <a href="notifications.html">
+                Notifications
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+                © 2026 Farmer First. All rights reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================== -->
+
+<script src="js/api.js"></script>
+
+<script src="js/notifications.js"></script>
+
+</body>
+
+</html>

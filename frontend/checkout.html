@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Checkout | Farmer First</title>
+
+<link
+    rel="stylesheet"
+    href="css/style.css"
+>
+
+<link
+    rel="stylesheet"
+    href="css/checkout.css"
+>
+
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="container nav-content">
+
+        <div class="logo">
+            🌱 Farmer First
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="cart.html">
+                Cart 🛒
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<main class="container page-section">
+
+    <div class="page-header">
+
+        <div>
+
+            <span class="section-label">
+                CHECKOUT
+            </span>
+
+            <h1>
+                Complete Your Order
+            </h1>
+
+            <p>
+                Enter your delivery address and place your order.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="checkoutMessage"
+        class="form-message"
+    ></div>
+
+
+    <div class="checkout-layout">
+
+
+        <!-- SHIPPING -->
+
+        <section class="checkout-form-card">
+
+            <h2>
+                Delivery Information
+            </h2>
+
+
+            <form id="checkoutForm">
+
+                <div class="form-group">
+
+                    <label for="shippingAddress">
+                        Shipping Address
+                    </label>
+
+                    <textarea
+                        id="shippingAddress"
+                        name="shippingAddress"
+                        rows="6"
+                        placeholder="Enter your complete delivery address..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    id="placeOrderBtn"
+                    class="btn btn-primary btn-full"
+                >
+                    Place Order 🛒
+                </button>
+
+
+                <a
+                    href="cart.html"
+                    class="btn btn-secondary btn-full"
+                >
+                    ← Back to Cart
+                </a>
+
+            </form>
+
+        </section>
+
+
+        <!-- ORDER SUMMARY -->
+
+        <aside class="checkout-summary">
+
+            <h2>
+                Order Summary
+            </h2>
+
+
+            <div id="checkoutItems">
+
+                <div class="loading">
+                    Loading cart...
+                </div>
+
+            </div>
+
+
+            <div class="summary-divider"></div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Items
+                </span>
+
+                <span id="checkoutItemCount">
+                    0
+                </span>
+
+            </div>
+
+
+            <div class="summary-row total-row">
+
+                <span>
+                    Total
+                </span>
+
+                <strong>
+                    ₹<span id="checkoutTotal">
+                        0.00
+                    </span>
+                </strong>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<script src="js/api.js"></script>
+
+<script src="js/checkout.js"></script>
+
+
+</body>
+
+</html>

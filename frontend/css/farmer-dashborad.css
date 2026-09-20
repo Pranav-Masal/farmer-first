@@ -1,0 +1,989 @@
+/* ============================================================
+   FARMER DASHBOARD
+   ============================================================ */
+
+.dashboard-header {
+    position: relative;
+    overflow: hidden;
+    padding: 70px 20px;
+    margin-bottom: 40px;
+    background: linear-gradient(135deg, #0f5132 0%, #198754 55%, #2f9e44 100%);
+    color: #ffffff;
+}
+
+.dashboard-header::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    right: -100px;
+    top: -140px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.dashboard-header::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: -100px;
+    bottom: -120px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.dashboard-header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dashboard-header h1 {
+    margin: 0 0 10px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.dashboard-header p {
+    margin: 0;
+    max-width: 650px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1.05rem;
+}
+
+.dashboard-header-icon {
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    font-size: 6rem;
+    opacity: 0.16;
+}
+
+
+/* ============================================================
+   DASHBOARD STATS
+   ============================================================ */
+
+.dashboard-stats {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.dashboard-stat-card {
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(15, 81, 50, 0.07);
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    transition: 0.25s ease;
+}
+
+.dashboard-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(15, 81, 50, 0.12);
+}
+
+.dashboard-stat-icon {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    background: #e8f5e9;
+}
+
+.dashboard-stat-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #6b7280;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.dashboard-stat-value {
+    display: block;
+    color: #14532d;
+    font-size: 1.9rem;
+    font-weight: 800;
+}
+
+
+/* ============================================================
+   DASHBOARD ACTIONS
+   ============================================================ */
+
+.dashboard-actions {
+    max-width: 1200px;
+    margin: 0 auto 45px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.dashboard-card {
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(15, 81, 50, 0.06);
+    transition: 0.25s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    border-color: #86efac;
+    box-shadow: 0 15px 35px rgba(15, 81, 50, 0.12);
+}
+
+.dashboard-card-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 18px;
+    border-radius: 14px;
+    background: #e8f5e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.dashboard-card h3 {
+    margin: 0 0 8px;
+    color: #1f2937;
+    font-size: 1.15rem;
+}
+
+.dashboard-card p {
+    margin: 0;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   PRODUCT FORM
+   ============================================================ */
+
+#productFormSection {
+    max-width: 1200px;
+    margin: 0 auto 45px;
+    padding: 0 20px;
+}
+
+.product-form-card {
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(15, 81, 50, 0.08);
+}
+
+.product-form-card h2 {
+    margin: 0 0 8px;
+    color: #14532d;
+    font-size: 1.7rem;
+}
+
+.product-form-card p {
+    color: #6b7280;
+}
+
+.product-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    color: #374151;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 11px;
+    background: #ffffff;
+    color: #1f2937;
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.2s ease;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 4px rgba(25, 135, 84, 0.1);
+}
+
+.form-message {
+    margin-top: 15px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+
+/* ============================================================
+   PRODUCTS
+   ============================================================ */
+
+#myProducts {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.product-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(15, 81, 50, 0.07);
+    transition: 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(15, 81, 50, 0.13);
+}
+
+.product-image,
+.product-image-placeholder {
+    width: 100%;
+    height: 220px;
+}
+
+.product-image {
+    display: block;
+    object-fit: cover;
+}
+
+.product-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ecfdf5;
+    font-size: 4rem;
+}
+
+.product-card-content {
+    padding: 22px;
+}
+
+.product-category {
+    display: inline-block;
+    margin-bottom: 9px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #ecfdf5;
+    color: #15803d;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.product-card h3 {
+    margin: 0 0 9px;
+    color: #1f2937;
+    font-size: 1.25rem;
+}
+
+.product-description {
+    margin: 0 0 18px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-top: 1px solid #f0f0f0;
+}
+
+.product-info strong {
+    color: #15803d;
+    font-size: 1.25rem;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 13px;
+    border-top: 1px solid #f0f0f0;
+    color: #6b7280;
+    font-size: 0.82rem;
+}
+
+
+/* ============================================================
+   FARMER ORDERS
+   ============================================================ */
+
+#farmerOrdersSection {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+
+#farmerOrdersContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.farmer-order-card {
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(15, 81, 50, 0.06);
+}
+
+.order-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.order-label {
+    display: block;
+    margin-bottom: 6px;
+    color: #6b7280;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.order-date {
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    padding: 7px 13px;
+    border-radius: 30px;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.status-pending {
+    color: #92400e;
+    background: #fef3c7;
+}
+
+.status-accepted {
+    color: #166534;
+    background: #dcfce7;
+}
+
+.status-rejected {
+    color: #991b1b;
+    background: #fee2e2;
+}
+
+.status-processing {
+    color: #1e40af;
+    background: #dbeafe;
+}
+
+.status-shipped {
+    color: #6b21a8;
+    background: #f3e8ff;
+}
+
+.status-delivered {
+    color: #166534;
+    background: #dcfce7;
+}
+
+.status-cancelled {
+    color: #4b5563;
+    background: #f3f4f6;
+}
+
+
+/* ============================================================
+   ORDER ITEMS
+   ============================================================ */
+
+.farmer-order-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 18px 0;
+}
+
+.farmer-order-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 16px;
+    background: #f8faf9;
+    border-radius: 12px;
+}
+
+.farmer-order-item strong {
+    color: #1f2937;
+}
+
+.farmer-order-item span {
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+
+/* ============================================================
+   ORDER SUMMARY
+   ============================================================ */
+
+.farmer-order-summary {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 25px;
+    padding: 18px 0;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.farmer-order-summary span {
+    color: #6b7280;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.farmer-order-summary strong {
+    color: #15803d;
+    font-size: 1.2rem;
+}
+
+.farmer-order-summary p {
+    margin: 0;
+    color: #374151;
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   ORDER ACTIONS
+   ============================================================ */
+
+.order-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.order-status-message {
+    margin-top: 18px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    background: #f8fafc;
+    color: #475569;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   EMPTY STATE
+   ============================================================ */
+
+.empty-state {
+    grid-column: 1 / -1;
+    padding: 55px 25px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px dashed #cbd5e1;
+    border-radius: 18px;
+}
+
+.empty-icon {
+    margin-bottom: 15px;
+    font-size: 3rem;
+}
+
+.empty-state h3 {
+    margin-bottom: 8px;
+    color: #1f2937;
+}
+
+.empty-state p {
+    color: #6b7280;
+}
+
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.btn-success {
+    border: none;
+    background: #198754;
+    color: #ffffff;
+}
+
+.btn-success:hover {
+    background: #157347;
+}
+
+.btn-danger {
+    border: none;
+    background: #dc3545;
+    color: #ffffff;
+}
+
+.btn-danger:hover {
+    background: #bb2d3b;
+}
+
+
+/* ============================================================
+   RESPONSIVE - TABLET
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+    .dashboard-stats,
+    .dashboard-actions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #myProducts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE - MOBILE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    .dashboard-header {
+        padding: 50px 18px;
+    }
+
+    .dashboard-header-icon {
+        display: none;
+    }
+
+    .dashboard-stats,
+    .dashboard-actions {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    #myProducts {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    #farmerOrdersSection,
+    #productFormSection {
+        padding: 0 15px;
+    }
+
+    .product-form-card {
+        padding: 22px;
+    }
+
+    .product-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .order-card-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .farmer-order-summary {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .order-actions {
+        flex-direction: column;
+    }
+
+    .order-actions .btn {
+        width: 100%;
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE - SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 430px) {
+
+    .dashboard-stat-card {
+        padding: 20px;
+    }
+
+    .dashboard-stat-value {
+        font-size: 1.5rem;
+    }
+
+    .dashboard-card {
+        padding: 22px;
+    }
+
+    .farmer-order-card {
+        padding: 18px;
+    }
+
+    .farmer-order-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-image,
+    .product-image-placeholder {
+        height: 190px;
+    }
+}
+
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    padding-top: 70px;
+    background: #102017;
+    color: #ffffff;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr repeat(3, 1fr);
+    gap: 45px;
+    padding-bottom: 55px;
+}
+
+.footer-brand .logo {
+    display: inline-block;
+    margin-bottom: 17px;
+    color: #ffffff;
+}
+
+.footer-brand p {
+    max-width: 320px;
+    margin: 0;
+    color: #a7b4aa;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.footer-links h3 {
+    margin-bottom: 9px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.footer-links a {
+    width: fit-content;
+    color: #a7b4aa;
+    font-size: 13px;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #819087;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 850px;
+        margin: auto;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions,
+    .hero-trust {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        min-height: 470px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .hero-section {
+        padding: 65px 0 80px;
+    }
+
+    .hero-grid {
+        min-height: auto;
+    }
+
+    .hero-content h1 {
+        font-size: 43px;
+        letter-spacing: -1.8px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero-trust {
+        flex-direction: column;
+        align-items: center;
+        gap: 13px;
+    }
+
+    .hero-visual {
+        min-height: 400px;
+    }
+
+    .hero-main-card {
+        width: 100%;
+        min-height: 350px;
+        padding: 35px;
+    }
+
+    .hero-main-card h2 {
+        font-size: 31px;
+    }
+
+    .floating-card-top {
+        top: 10px;
+        right: -5px;
+    }
+
+    .floating-card-bottom {
+        bottom: 15px;
+        left: -5px;
+    }
+
+    .stats-section {
+        margin-top: -20px;
+        padding-bottom: 60px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-section,
+    .how-section,
+    .farmer-cta,
+    .buyer-cta {
+        padding: 75px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 38px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 42px 30px;
+    }
+
+    .cta-visual {
+        position: absolute;
+        right: -40px;
+        bottom: -40px;
+        width: 170px;
+        height: 170px;
+        font-size: 80px;
+        opacity: 0.6;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-main-card {
+        min-height: 320px;
+        padding: 28px;
+        border-radius: 25px;
+    }
+
+    .hero-card-icon {
+        width: 62px;
+        height: 62px;
+        font-size: 30px;
+    }
+
+    .hero-main-card h2 {
+        font-size: 27px;
+    }
+
+    .floating-card {
+        padding: 11px 13px;
+    }
+
+    .floating-card > span {
+        width: 35px;
+        height: 35px;
+        font-size: 17px;
+    }
+
+    .floating-card strong {
+        font-size: 11px;
+    }
+
+    .floating-card small {
+        font-size: 9px;
+    }
+
+    .feature-card,
+    .step-card {
+        padding: 27px 22px;
+    }
+
+    .cta-card {
+        padding: 35px 24px;
+    }
+}
+

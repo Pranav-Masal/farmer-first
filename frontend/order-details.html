@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Order Details | Farmer First</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/order-details.css">
+
+    <link
+        rel="stylesheet"
+        href="css/order-details.css"
+    >
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="container nav-content">
+
+            <div class="logo">
+                🌱 Farmer First
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Marketplace
+                </a>
+
+                <a href="cart.html">
+                    🛒 Cart
+                </a>
+
+                <a href="orders.html">
+                    📦 Orders
+                </a>
+
+                <a href="notifications.html">
+                    🔔 Notifications
+
+                    <span
+                        id="notificationBadge"
+                        class="notification-badge"
+                    >0</span>
+
+                </a>
+
+                <button
+                    class="logout-btn"
+                    onclick="logout()"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="container order-details-page">
+
+        <!-- Page Header -->
+
+        <div class="order-details-header">
+
+            <div>
+
+                <span class="section-label">
+                    ORDER DETAILS
+                </span>
+
+                <h1>
+                    Order Details 📦
+                </h1>
+
+                <p>
+                    View complete information about your order.
+                </p>
+
+            </div>
+
+            <a
+                href="orders.html"
+                class="btn btn-secondary"
+            >
+                ← Back to Orders
+            </a>
+
+        </div>
+
+
+        <!-- Message -->
+
+        <div
+            id="orderDetailsMessage"
+            class="form-message"
+        ></div>
+
+
+        <!-- Loading -->
+
+        <div
+            id="orderDetailsLoading"
+            class="loading"
+        >
+            Loading order details...
+        </div>
+
+
+        <!-- Order Details -->
+
+        <div
+            id="orderDetailsContainer"
+            class="order-details-container"
+        >
+
+            <!-- Order Overview -->
+
+            <section class="order-overview-card">
+
+                <div class="order-overview-header">
+
+                    <div>
+
+                        <span class="overview-label">
+                            ORDER ID
+                        </span>
+
+                        <h2 id="orderId">
+                            #--
+                        </h2>
+
+                    </div>
+
+                    <div
+                        id="orderStatus"
+                        class="order-status"
+                    >
+                        Pending
+                    </div>
+
+                </div>
+
+
+                <div class="order-meta">
+
+                    <div class="order-meta-item">
+
+                        <span>
+                            Order Date
+                        </span>
+
+                        <strong id="orderDate">
+                            --
+                        </strong>
+
+                    </div>
+
+                    <div class="order-meta-item">
+
+                        <span>
+                            Total Items
+                        </span>
+
+                        <strong id="orderItemCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <div class="order-meta-item">
+
+                        <span>
+                            Payment
+                        </span>
+
+                        <strong id="paymentStatus">
+                            Pending
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Products -->
+
+            <section class="order-products-card">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            PRODUCTS
+                        </span>
+
+                        <h2>
+                            Ordered Products
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="orderItems"
+                    class="order-items"
+                >
+
+                    <div class="loading">
+                        Loading products...
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Shipping + Summary -->
+
+            <div class="order-bottom-grid">
+
+
+                <!-- Shipping Address -->
+
+                <section class="shipping-card">
+
+                    <div class="section-heading">
+
+                        <span class="section-label">
+                            DELIVERY
+                        </span>
+
+                        <h2>
+                            Shipping Address
+                        </h2>
+
+                    </div>
+
+                    <div class="shipping-address">
+
+                        <div class="address-icon">
+                            📍
+                        </div>
+
+                        <p id="shippingAddress">
+                            Loading address...
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Order Summary -->
+
+                <section class="order-summary-card">
+
+                    <div class="section-heading">
+
+                        <span class="section-label">
+                            SUMMARY
+                        </span>
+
+                        <h2>
+                            Order Summary
+                        </h2>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Items
+                        </span>
+
+                        <strong id="summaryItemCount">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <strong id="orderSubtotal">
+                            ₹0.00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Delivery
+                        </span>
+
+                        <strong id="deliveryCharge">
+                            Free
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-divider"></div>
+
+
+                    <div class="summary-row total-row">
+
+                        <span>
+                            Total Amount
+                        </span>
+
+                        <strong id="orderGrandTotal">
+                            ₹0.00
+                        </strong>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- Order Actions -->
+
+            <section class="order-actions-card">
+
+                <div>
+
+                    <h3>
+                        Need help with this order?
+                    </h3>
+
+                    <p>
+                        You can return to your orders or continue
+                        shopping in the marketplace.
+                    </p>
+
+                </div>
+
+                <div class="order-actions">
+
+                    <a
+                        href="orders.html"
+                        class="btn btn-secondary"
+                    >
+                        View All Orders
+                    </a>
+
+                    <a
+                        href="products.html"
+                        class="btn btn-primary"
+                    >
+                        Continue Shopping
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="js/api.js"></script>
+
+    <script src="js/order-details.js"></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,480 @@
+/* =========================================================
+   PROFILE PAGE
+========================================================= */
+
+.profile-page {
+    min-height: 100vh;
+    background: #f5f7f5;
+}
+
+
+/* =========================================================
+   PROFILE MAIN
+========================================================= */
+
+.profile-main {
+    padding: 55px 0 80px;
+}
+
+.profile-container {
+    width: 92%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   PROFILE HEADER
+========================================================= */
+
+.profile-header {
+    margin-bottom: 30px;
+}
+
+.profile-label {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: #15803d;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.profile-header h1 {
+    margin: 0;
+
+    color: #102017;
+
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.profile-header p {
+    margin: 8px 0 0;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.profile-message {
+    display: none;
+
+    margin-bottom: 20px;
+    padding: 13px 16px;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.profile-message.success {
+    display: block;
+
+    background: #dcfce7;
+    color: #166534;
+}
+
+.profile-message.error {
+    display: block;
+
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+
+/* =========================================================
+   PROFILE CARD
+========================================================= */
+
+.profile-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 22px;
+
+    box-shadow:
+        0 15px 40px rgba(16, 32, 23, 0.07);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   PROFILE TOP
+========================================================= */
+
+.profile-top {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #102017,
+            #173d27
+        );
+
+    color: #ffffff;
+}
+
+.profile-avatar {
+    width: 78px;
+    height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #15803d;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+.profile-user-info h2 {
+    margin: 0;
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.profile-user-info p {
+    margin: 5px 0 10px;
+
+    color: #b8c9bd;
+
+    font-size: 13px;
+}
+
+.profile-role {
+    display: inline-flex;
+
+    padding: 5px 11px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PROFILE SECTION
+========================================================= */
+
+.profile-section {
+    padding: 30px 35px;
+
+    border-bottom: 1px solid #edf0ee;
+}
+
+.profile-section-title {
+    margin-bottom: 20px;
+}
+
+.profile-section-title h3 {
+    margin: 0;
+
+    color: #1f2937;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   PROFILE GRID
+========================================================= */
+
+.profile-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.profile-field {
+    min-width: 0;
+}
+
+.profile-field-full {
+    grid-column: 1 / -1;
+}
+
+.profile-field label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #6b7280;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+.profile-value {
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 11px 13px;
+
+    background: #f8faf8;
+
+    border: 1px solid #e5e9e6;
+    border-radius: 9px;
+
+    color: #1f2937;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.profile-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    padding: 25px 35px;
+
+    background: #fafcfb;
+}
+
+.profile-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 120px;
+
+    padding: 11px 18px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.profile-btn:hover {
+    transform: translateY(-2px);
+}
+
+.profile-btn.secondary {
+    background: #ffffff;
+
+    border: 1px solid #d5ddd7;
+
+    color: #374151;
+}
+
+.profile-btn.secondary:hover {
+    background: #f3f5f4;
+}
+
+.profile-btn.danger {
+    border: none;
+
+    background: #dc2626;
+
+    color: #ffffff;
+}
+
+.profile-btn.danger:hover {
+    background: #b91c1c;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .profile-main {
+        padding: 40px 0 60px;
+    }
+
+    .profile-header h1 {
+        font-size: 29px;
+    }
+
+    .profile-top {
+        padding: 28px;
+    }
+
+    .profile-section {
+        padding: 25px 28px;
+    }
+
+    .profile-actions {
+        padding: 22px 28px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .profile-container {
+        width: 92%;
+    }
+
+    .profile-header h1 {
+        font-size: 26px;
+    }
+
+    .profile-header p {
+        font-size: 13px;
+    }
+
+    .profile-top {
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        padding: 30px 20px;
+    }
+
+    .profile-avatar {
+        width: 70px;
+        height: 70px;
+
+        font-size: 27px;
+    }
+
+    .profile-user-info h2 {
+        font-size: 21px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-field-full {
+        grid-column: auto;
+    }
+
+    .profile-section {
+        padding: 25px 20px;
+    }
+
+    .profile-actions {
+        flex-direction: column;
+
+        padding: 20px;
+    }
+
+    .profile-btn {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .profile-main {
+        padding: 30px 0 45px;
+    }
+
+    .profile-card {
+        border-radius: 16px;
+    }
+
+    .profile-header h1 {
+        font-size: 24px;
+    }
+
+    .profile-top {
+        padding: 25px 15px;
+    }
+
+    .profile-section {
+        padding: 22px 16px;
+    }
+
+    .profile-section-title h3 {
+        font-size: 16px;
+    }
+
+    .profile-value {
+        font-size: 13px;
+    }
+
+    .profile-actions {
+        padding: 18px 16px;
+    }
+
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.profile-btn.primary {
+    border: none;
+
+    background: #15803d;
+    color: #ffffff;
+}
+
+.profile-btn.primary:hover {
+    background: #166534;
+}
