@@ -394,7 +394,7 @@ function getImageUrl(
 
 
     const API_BASE_URL =
-        "http://127.0.0.1:8000";
+        "https://farmer-first-backend.onrender.com";
 
 
     if (
@@ -857,7 +857,7 @@ async function loadOrderDetails() {
 
         const response =
             await fetch(
-                `http://127.0.0.1:8000/api/orders/${orderId}/`,
+                `https://farmer-first-backend.onrender.com/api/orders/${orderId}/`,
                 {
                     method: "GET",
 

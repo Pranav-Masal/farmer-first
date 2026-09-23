@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://127.0.0.1:8000/api";
+const API_BASE_URL = "https://farmer-first-backend.onrender.com/api";
 
 
 /* =========================================
@@ -397,5 +397,5 @@ function getImageUrl(imagePath) {
         return imagePath;
     }
 
-    return `http://127.0.0.1:8000${imagePath}`;
+    return `https://farmer-first-backend.onrender.com${imagePath}`;
 }

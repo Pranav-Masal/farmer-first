@@ -728,7 +728,7 @@ if (
     return imagePath;
 }
 
-return `http://127.0.0.1:8000${imagePath}`;
+return `https://farmer-first-backend.onrender.com${imagePath}`;
 
 }
 
