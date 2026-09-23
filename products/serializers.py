@@ -92,3 +92,10 @@ class ProductSerializer(serializers.ModelSerializer):
 
         return value
 
+
+
+
+    def create(self, validated_data):
+        validated_data["is_available"] = True
+        return Product.objects.create(**validated_data)
+
