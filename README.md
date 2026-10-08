@@ -430,15 +430,23 @@ Visit the deployed application:
 
 Add project screenshots here to showcase the application UI.
 
-```markdown
+## 📸 Screenshots
+
+### 🏠 Home Page
+
 ![Home Page](screenshots/home.png)
+
+### 🛍️ Products
 
 ![Products](screenshots/products.png)
 
+### 🛒 Cart
+
 ![Cart](screenshots/carts.png)
 
+### 📦 Orders
+
 ![Orders](screenshots/orders.png)
-```
 
 ---
 
