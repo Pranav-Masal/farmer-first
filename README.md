@@ -435,7 +435,7 @@ Add project screenshots here to showcase the application UI.
 
 ![Products](screenshots/products.png)
 
-![Cart](screenshots/cart.png)
+![Cart](screenshots/carts.png)
 
 ![Orders](screenshots/orders.png)
 ```
